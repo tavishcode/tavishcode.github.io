@@ -1,0 +1,49 @@
+html, body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.vertical-center {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slottt-machine-recipe {
+  margin: auto;
+  width: 128px;
+  height: 170px;
+}
+
+.slottt-machine-recipe__mask {
+    width: 128px;
+    height: 170px;
+    overflow: hidden; 
+    position: relative;
+}
+
+.slottt-machine-recipe__items_container {
+    height: 170px;
+    position: absolute;
+}
+
+.slottt-machine-recipe__item {
+    min-height: 170px;
+    max-height: 170px;
+    width: 128px;
+    margin: 0px;
+    padding: 0px;
+    background-size: contain;
+}
+
+/* Typography */
+
+body {
+  font-family: Helvetica, Arial, sans serif;
+}
+
+.recipe_if, .recipe_then {
+    font-weight: bold;
+    font-size: 120px;
+}
