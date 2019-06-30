@@ -13,6 +13,7 @@ function buildSlotItem (text) {
     link.target='_blank'
     var image = document.createElement('img');
     image.src="/" + text[0];
+    image.className = 'img-responsive';
     link.appendChild(image)
     return $('<div>').addClass('slottt-machine-recipe__item').html(link)
 }

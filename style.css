@@ -3,6 +3,12 @@ html, body {
     overflow: hidden;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
 .vertical-center {
   height: 100%;
   display: flex;
@@ -31,7 +37,6 @@ html, body {
 .slottt-machine-recipe__item {
     min-height: 170px;
     max-height: 170px;
-    width: 128px;
     margin: 0px;
     padding: 0px;
     background-size: contain;
