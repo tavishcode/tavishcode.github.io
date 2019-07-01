@@ -44,10 +44,22 @@ function rotateContents ($container, n) {
     }, 300);    
 }
 
+function animateCallback() {
+    icon_names = document.getElementsByClassName('icon-name')
+    for (var i = 0; i < icon_names.length; i++) {
+        icon_names[i].style.visibility = "visible";
+    }
+}
+
 function animate() {
-    stop_ixs = [12, 13, 14]
+    stop_ixs = [12, 13, 14];
+    count = boxes.length;
     for(var i = 0; i < num_boxes; i++) {
-        boxes[i].animate({top: -stop_ixs[i]*170}, {duration: 500, queue: false}, 'swing', function () {
+        boxes[i].animate({top: -stop_ixs[i]*150}, {duration: 500, complete: function() {
+            if (--count == 0) {
+              animateCallback();
+            }
+          }}, 'swing', function () {
             rotateContents(boxes[i], stop_ixs[i]);
         });
     }    

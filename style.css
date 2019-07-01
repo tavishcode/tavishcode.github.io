@@ -9,6 +9,11 @@ img {
     width: auto\9; /* ie8 */
 }
 
+body {
+    font-family: Helvetica, Arial, sans serif;
+  }
+  
+
 .bg {
     background-color: black;
 }
@@ -36,30 +41,30 @@ img {
 
 .slottt-machine-recipe {
   margin: auto;
-  height: 170px;
+  height: 150px;
 }
 
 .slottt-machine-recipe__mask {
     margin: auto;
     width: 128px;
-    height: 170px;
+    height: 150px;
     overflow: hidden; 
     position: relative;
 }
 
 .slottt-machine-recipe__items_container {
-    height: 170px;
+    height: 150px;
     position: absolute;
 }
 
 .slottt-machine-recipe__item {
-    min-height: 170px;
-    max-height: 170px;
+    min-height: 150px;
     width: 100%;
+    margin: auto;
 }
 
-/* Typography */
-
-body {
-  font-family: Helvetica, Arial, sans serif;
+.icon-name {
+    font-family: 'Noto Sans', sans-serif; 
+    color: white;
+    visibility: hidden;
 }
