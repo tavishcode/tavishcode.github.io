@@ -2,9 +2,9 @@
 // jen@ifttt.com
 // github.com/jhamon
 var images = [
-    ['github.png', 'https://www.github.com/tavishcode'],
-    ['linkedin.png', 'https://www.linkedin.com/in/tgobindram'],
-    ['resume.png', 'resume.pdf'],
+    ['github.png', 'https://www.github.com/tavishcode', 'GitHub'],
+    ['linkedin.png', 'https://www.linkedin.com/in/tgobindram', 'LinkedIn'],
+    ['resume.png', 'resume.pdf', 'Resume'],
 ]
 
 function buildSlotItem (text) {
@@ -14,6 +14,7 @@ function buildSlotItem (text) {
     var image = document.createElement('img');
     image.src="/" + text[0];
     image.className = 'img-responsive';
+    image.title = text[2]
     link.appendChild(image)
     return $('<div>').addClass('slottt-machine-recipe__item').html(link)
 }
@@ -44,33 +45,25 @@ function rotateContents ($container, n) {
 }
 
 function animate() {
-  $wordbox1.animate({top: -6*170}, {duration: 500, queue: false}, 'swing', function () {
-    rotateContents($wordbox1, 6);
-  });
-  $wordbox2.animate({top: -7*170}, {duration: 500, queue: false}, 'swing', function () {
-    rotateContents($wordbox2, 7);
-  });
-  $wordbox3.animate({top: -8*170}, {duration: 500, queue: false}, 'swing', function () {
-    rotateContents($wordbox3, 8);
-  });
-  
+    stop_ixs = [12, 13, 14]
+    for(var i = 0; i < num_boxes; i++) {
+        boxes[i].animate({top: -stop_ixs[i]*170}, {duration: 500, queue: false}, 'swing', function () {
+            rotateContents(boxes[i], stop_ixs[i]);
+        });
+    }    
 }
 
 $(function () {
-    $wordbox1 = $('#wordbox1 .slottt-machine-recipe__items_container');
-    buildSlotContents($wordbox1, images);  
-    buildSlotContents($wordbox1, images);  
-    buildSlotContents($wordbox1, images);  
-    buildSlotContents($wordbox1, images);  
-    $wordbox2 = $('#wordbox2 .slottt-machine-recipe__items_container');
-    buildSlotContents($wordbox2, images);  
-    buildSlotContents($wordbox2, images);  
-    buildSlotContents($wordbox2, images);  
-    buildSlotContents($wordbox2, images);  
-    $wordbox3 = $('#wordbox3 .slottt-machine-recipe__items_container');
-    buildSlotContents($wordbox3, images);  
-    buildSlotContents($wordbox3, images);  
-    buildSlotContents($wordbox3, images);  
-    buildSlotContents($wordbox3, images);  
+    boxes = [];
+    num_boxes = 3;
+    num_spins = 5
+    for(var i = 0; i < num_boxes; i++) {
+        boxes.push($(`#box${i} .slottt-machine-recipe__items_container`))
+    }
+    for(var i = 0; i < num_boxes; i++) {
+        for(var j = 0; j < num_spins; j++) {
+            buildSlotContents(boxes[i], images); 
+        }
+    }
     animate()
 });
