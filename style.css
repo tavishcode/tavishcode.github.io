@@ -17,14 +17,6 @@ body {
     background-color: black;
 }
 
-.name {
-    font-family: 'Noto Sans', sans-serif; 
-    font-size: 6vw; 
-    font-weight: 700; 
-    color:white; 
-    margin-bottom: 3vh;
-}
-
 .jumbo-center {
   height: 100%;
   display: flex;
@@ -63,6 +55,12 @@ body {
 }
 
 .icon-name {
+    font-family: 'Noto Sans', sans-serif; 
+    color: white;
+    visibility: hidden;
+}
+
+.email {
     font-family: 'Noto Sans', sans-serif; 
     color: white;
     visibility: hidden;

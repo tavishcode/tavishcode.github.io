@@ -45,10 +45,12 @@ function rotateContents ($container, n) {
 }
 
 function animateCallback() {
-    icon_names = document.getElementsByClassName('icon-name')
+    icon_names = document.getElementsByClassName('icon-name');
     for (var i = 0; i < icon_names.length; i++) {
         icon_names[i].style.visibility = "visible";
     }
+    email = document.getElementsByClassName('email')[0];
+    email.style.visibility = "visible";
 }
 
 function animate() {
