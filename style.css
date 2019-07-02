@@ -31,6 +31,7 @@ body {
 
 .icon {
     opacity: 0;
+    margin-bottom: 1vh;
 }
 
 .icon-name {
@@ -39,10 +40,15 @@ body {
     opacity: 0;
 }
 
+.buffer {
+    margin-bottom: 2vh;
+}
+
 .email {
     font-family: 'Noto Sans', sans-serif; 
     color: white;
     opacity: 0;
+    margin-top: 6vh;
 }
 
 .ml11 {
