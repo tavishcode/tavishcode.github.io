@@ -4,9 +4,8 @@ html, body {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
+    margin: auto;    
+    display: block;
 }
 
 body {
@@ -18,11 +17,11 @@ body {
 }
 
 .jumbo-center {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background:transparent !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:transparent !important;
 }
 
 .cont-center {
@@ -30,40 +29,20 @@ body {
     margin-right: 2vh;
 }
 
-.slottt-machine-recipe {
-  margin: auto;
-  height: 150px;
-}
-
-.slottt-machine-recipe__mask {
-    margin: auto;
-    width: 128px;
-    height: 150px;
-    overflow: hidden; 
-    position: relative;
-}
-
-.slottt-machine-recipe__items_container {
-    height: 150px;
-    position: absolute;
-}
-
-.slottt-machine-recipe__item {
-    min-height: 150px;
-    width: 100%;
-    margin: auto;
+.icon {
+    opacity: 0;
 }
 
 .icon-name {
     font-family: 'Noto Sans', sans-serif; 
     color: white;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .email {
     font-family: 'Noto Sans', sans-serif; 
     color: white;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .ml11 {
@@ -73,15 +52,15 @@ body {
     margin-bottom: 3vh;
   }
   
-  .ml11 .text-wrapper {
+.ml11 .text-wrapper {
     position: relative;
     display: inline-block;
     padding-top: 0.1em;
     padding-right: 0.05em;
     padding-bottom: 0.15em;
-  }
-  
-  .ml11 .line {
+}
+
+.ml11 .line {
     opacity: 0;
     position: absolute;
     left: 0;
@@ -89,14 +68,14 @@ body {
     width: 3px;
     background-color: #fff;
     transform-origin: 0 50%;
-  }
-  
-  .ml11 .line1 { 
+}
+
+.ml11 .line1 { 
     top: 0; 
     left: 0;
-  }
-  
-  .ml11 .letter {
+}
+
+.ml11 .letter {
     display: inline-block;
     line-height: 1em;
-  }
+}
