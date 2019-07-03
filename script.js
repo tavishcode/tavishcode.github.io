@@ -36,9 +36,16 @@ $(function () {
             delay: 200
         })
         .add({
+            targets: '.title',
+            opacity: 1,
+            translateY: [-25, 0]
+
+        })
+        .add({
             targets: '.icon',
             opacity: 1,
-            translateX: [-100, 0]
+            translateX: [-100, 0],
+            offset: '-=400'
         })
         .add({
             targets: '.icon-name',

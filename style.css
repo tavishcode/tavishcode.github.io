@@ -4,8 +4,7 @@ html, body {
 }
 
 img {
-    margin: auto;    
-    display: block;
+    margin: auto;
 }
 
 body {
@@ -35,7 +34,9 @@ body {
 }
 
 .icon-name {
+    display: block;
     font-family: 'Noto Sans', sans-serif; 
+    font-size: 0.75em;
     color: white;
     opacity: 0;
 }
@@ -51,19 +52,27 @@ body {
     margin-top: 6vh;
 }
 
+.title {
+    font-family: 'Noto Sans', sans-serif; 
+    font-size: 2.75vw;
+    color: white;
+    opacity: 0;
+    margin-bottom: 9vh;
+}
+
 .ml11 {
+    font-family: 'Noto Sans', sans-serif; 
     font-weight: 900;
     color: white;
     font-size: 6vw;
-    margin-bottom: 3vh;
-  }
+}
   
 .ml11 .text-wrapper {
     position: relative;
     display: inline-block;
     padding-top: 0.1em;
     padding-right: 0.05em;
-    padding-bottom: 0.15em;
+    padding-bottom: 0.05em;
 }
 
 .ml11 .line {
