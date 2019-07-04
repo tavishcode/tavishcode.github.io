@@ -1,6 +1,7 @@
 $(function () {
     $('.ml11 .letters').each(function(){
         $(this).html($(this).text().replace(/([^\x20]|\w)/g, "<span class='letter'>$&</span>"));
+        $(this).css('visibility', 'visible');
     });
   
     anime.timeline()

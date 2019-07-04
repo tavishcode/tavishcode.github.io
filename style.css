@@ -74,6 +74,10 @@ body {
     font-size: 6vw;
 }
   
+.letters {
+    visibility: hidden;
+}
+
 .ml11 .text-wrapper {
     position: relative;
     display: inline-block;
