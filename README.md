@@ -1,5 +1,5 @@
 # My Personal Website
-Check it out at [taviscode.github.io](http://tavishcode.github.io)
+Check it out at [tavishcode.github.io](http://tavishcode.github.io)
 
 Right now it has links to GitHub, LinkedIn and my resume. May add more stuff later
 
